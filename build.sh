@@ -17,6 +17,8 @@ export GOPATH=$BUILD_DIR
 mkdir -p ~/.ssh
 echo "$KEY" > ~/.ssh/id_rsa
 chmod 400 ~/.ssh/id_rsa
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa
 
 # Checkout private repositories if they don't exist
 if [ ! -d $SRC_DIR ]; then
