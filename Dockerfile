@@ -18,7 +18,7 @@ RUN ssh-keyscan -H github.com >> /root/.ssh/known_hosts
 COPY build.sh /usr/local/bin/build
 
 # Download and unpack golang archive
-RUN wget https://storage.googleapis.com/golang/go1.3.3.linux-amd64.tar.gz -O /tmp/golang.tar.gz
+RUN wget https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz -O /tmp/golang.tar.gz
 RUN tar -C /usr/local -xzf /tmp/golang.tar.gz
 
 # Clean up APT when done.
