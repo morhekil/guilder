@@ -14,6 +14,7 @@ export GOPATH=$BUILD_DIR
 
 # Get the repo auth key
 # wget -O ~/.ssh/`basename "$KEY"` "$KEY"
+mkdir -p ~/.ssh
 echo "$KEY" > ~/.ssh/id_rsa
 chmod 400 ~/.ssh/id_rsa
 
